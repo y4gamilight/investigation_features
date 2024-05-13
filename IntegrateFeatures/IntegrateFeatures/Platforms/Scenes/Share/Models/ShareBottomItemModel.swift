@@ -11,7 +11,7 @@ struct ShareBottomViewItemModel {
     var image: UIImage
     var content: String
     init(type: EShareType) {
-        self.image = UIImage(named: type.rawValue) ?? UIImage()
+        self.image = type.image
         self.content = type.content
     }
 }

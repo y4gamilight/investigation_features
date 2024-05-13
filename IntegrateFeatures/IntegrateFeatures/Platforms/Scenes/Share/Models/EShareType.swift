@@ -28,4 +28,19 @@ enum EShareType: String {
             "More"
         }
     }
+    
+    var image: UIImage {
+        switch self {
+        case .messages:
+            return UIImage(named: "ic_message")!
+        case .instagram:
+            return UIImage(named: "ic_instagram")!
+        case .whatsApp:
+            return UIImage(named:"ic_whatsapp")!
+        case .saveImage:
+            return UIImage(named:"ic_technology")!
+        case .more:
+            return UIImage(named:"ic_share")!
+        }
+    }
 }

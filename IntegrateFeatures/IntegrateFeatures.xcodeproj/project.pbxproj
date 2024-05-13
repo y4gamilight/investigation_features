@@ -216,7 +216,7 @@
 			children = (
 				9F6EB21E2BF1EC100028828A /* Layouts */,
 				9F6EB1FA2BF1D7D60028828A /* Storyboards */,
-				9F6EB1FB2BF1D7D60028828A /* Images */,
+				9F6EB1FB2BF1D7D60028828A /* Assets */,
 				9F6EB1FD2BF1D7D60028828A /* LaunchScreen.storyboard */,
 				9F6EB1FF2BF1D7D60028828A /* Main.storyboard */,
 			);
@@ -230,12 +230,12 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		9F6EB1FB2BF1D7D60028828A /* Images */ = {
+		9F6EB1FB2BF1D7D60028828A /* Assets */ = {
 			isa = PBXGroup;
 			children = (
 				9F6EB1FC2BF1D7D60028828A /* Assets.xcassets */,
 			);
-			path = Images;
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		9F6EB2012BF1D7D60028828A /* Application */ = {
