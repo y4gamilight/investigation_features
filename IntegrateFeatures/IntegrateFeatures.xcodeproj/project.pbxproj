@@ -27,6 +27,11 @@
 		9F6EB21D2BF1E84C0028828A /* ShareBottomViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6EB21C2BF1E84C0028828A /* ShareBottomViewDataSource.swift */; };
 		9F6EB2202BF1EC220028828A /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6EB21F2BF1EC220028828A /* AppColors.swift */; };
 		9F6EB2242BF1EC620028828A /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6EB2232BF1EC620028828A /* Color+Ext.swift */; };
+		9F6EB2272BF200090028828A /* EShareItemScaleLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6EB2262BF200090028828A /* EShareItemScaleLevel.swift */; };
+		9F6EB2292BF2013C0028828A /* ShareItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6EB2282BF2013C0028828A /* ShareItemModel.swift */; };
+		9F6EB22B2BF2075B0028828A /* UIImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6EB22A2BF2075B0028828A /* UIImageView+Ext.swift */; };
+		9F6EB22D2BF209540028828A /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6EB22C2BF209540028828A /* UIView+Ext.swift */; };
+		9F6EB22F2BF209AB0028828A /* AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6EB22E2BF209AB0028828A /* AppFonts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +76,11 @@
 		9F6EB21C2BF1E84C0028828A /* ShareBottomViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareBottomViewDataSource.swift; sourceTree = "<group>"; };
 		9F6EB21F2BF1EC220028828A /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		9F6EB2232BF1EC620028828A /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
+		9F6EB2262BF200090028828A /* EShareItemScaleLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EShareItemScaleLevel.swift; sourceTree = "<group>"; };
+		9F6EB2282BF2013C0028828A /* ShareItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareItemModel.swift; sourceTree = "<group>"; };
+		9F6EB22A2BF2075B0028828A /* UIImageView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ext.swift"; sourceTree = "<group>"; };
+		9F6EB22C2BF209540028828A /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		9F6EB22E2BF209AB0028828A /* AppFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFonts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +199,8 @@
 			children = (
 				9F6EB1F12BF1D7D60028828A /* EShareType.swift */,
 				9F6EB1F22BF1D7D60028828A /* ShareBottomItemModel.swift */,
+				9F6EB2262BF200090028828A /* EShareItemScaleLevel.swift */,
+				9F6EB2282BF2013C0028828A /* ShareItemModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -260,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				9F6EB21F2BF1EC220028828A /* AppColors.swift */,
+				9F6EB22E2BF209AB0028828A /* AppFonts.swift */,
 			);
 			path = Layouts;
 			sourceTree = "<group>";
@@ -276,6 +289,8 @@
 			isa = PBXGroup;
 			children = (
 				9F6EB2232BF1EC620028828A /* Color+Ext.swift */,
+				9F6EB22A2BF2075B0028828A /* UIImageView+Ext.swift */,
+				9F6EB22C2BF209540028828A /* UIView+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -411,7 +426,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F6EB2272BF200090028828A /* EShareItemScaleLevel.swift in Sources */,
 				9F6EB2152BF1D7D60028828A /* AppDelegate.swift in Sources */,
+				9F6EB22B2BF2075B0028828A /* UIImageView+Ext.swift in Sources */,
+				9F6EB2292BF2013C0028828A /* ShareItemModel.swift in Sources */,
 				9F6EB2242BF1EC620028828A /* Color+Ext.swift in Sources */,
 				9F6EB20A2BF1D7D60028828A /* CenterAlignedCollectionViewFlowLayout.swift in Sources */,
 				9F6EB2102BF1D7D60028828A /* ShareBottomView.swift in Sources */,
@@ -420,8 +438,10 @@
 				9F6EB20B2BF1D7D60028828A /* ShareBottomViewCell.swift in Sources */,
 				9F6EB20C2BF1D7D60028828A /* EShareType.swift in Sources */,
 				9F6EB2112BF1D7D60028828A /* NavBarView.swift in Sources */,
+				9F6EB22D2BF209540028828A /* UIView+Ext.swift in Sources */,
 				9F6EB2172BF1D7D60028828A /* SceneDelegate.swift in Sources */,
 				9F6EB21D2BF1E84C0028828A /* ShareBottomViewDataSource.swift in Sources */,
+				9F6EB22F2BF209AB0028828A /* AppFonts.swift in Sources */,
 				9F6EB20F2BF1D7D60028828A /* ShareView.swift in Sources */,
 				9F6EB20E2BF1D7D60028828A /* ReliaShareVC.swift in Sources */,
 				9F6EB20D2BF1D7D60028828A /* ShareBottomItemModel.swift in Sources */,

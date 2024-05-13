@@ -31,6 +31,9 @@ class ReliaShareVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        let model = ShareItemModel(publisherName: "VNExpress", iconUrl: "https://sannhiphutho.com/wp-content/uploads/2022/08/vnexpress.png", title: "90% of condotel projects record no sale in Q1", content: "Ninety percent of condotel projects in Vietnam recorded no sales in the first quarter as demand plunged to a five-year low, according to market researcher DKRA Group.\nAlthough 4,800 new units were launched, only 64, or 1%, were sold, said a new report by the group.\nMost of the new units came from existing projects in central and southern Vietnam: Quang Nam, Binh Dinh, Khanh Hoa, Binh Thuan and Ba Ria-Vung Tau.")
+        
+        shareView.model = model
     }
     
     private func setup() {

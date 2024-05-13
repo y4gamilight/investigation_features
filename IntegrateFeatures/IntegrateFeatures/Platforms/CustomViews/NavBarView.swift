@@ -29,7 +29,6 @@ class NavBarView: UIView {
         btn.translatesAutoresizingMaskIntoConstraints = false
         return btn
     }()
-    @objc private func btnBackDidTouch() { }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -60,4 +59,7 @@ class NavBarView: UIView {
         lblTitle.text = title
         btnBack.setImage(.init(named: backIcon), for: .normal)
     }
+    
+    @objc private func btnBackDidTouch() { }
+    
 }

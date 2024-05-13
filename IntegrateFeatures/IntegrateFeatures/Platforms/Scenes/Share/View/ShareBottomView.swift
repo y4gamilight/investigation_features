@@ -19,6 +19,7 @@ class ShareBottomView: UIView {
         layout.scrollDirection = .vertical
         let clv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         clv.backgroundColor = .clear
+        clv.isScrollEnabled = false
         clv.translatesAutoresizingMaskIntoConstraints = false
         return clv
     }()
@@ -55,7 +56,7 @@ class ShareBottomView: UIView {
     }
     
     func loadData() {
-        var optionsList: [ShareBottomViewItemModel] = [.init(type: .messages),
+        let optionsList: [ShareBottomViewItemModel] = [.init(type: .messages),
                                                                .init(type: .instagram),
                                                                .init(type: .whatsApp),
                                                                .init(type: .saveImage),
