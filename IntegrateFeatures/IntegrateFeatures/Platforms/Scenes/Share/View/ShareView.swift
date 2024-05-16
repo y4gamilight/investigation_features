@@ -125,6 +125,7 @@ class ShareView: UIView {
         super.init(frame: frame)
         setupView()
         addGesture()
+        updateView()
     }
     
     
@@ -132,6 +133,7 @@ class ShareView: UIView {
         super.init(coder: aDecoder)
         setupView()
         addGesture()
+        updateView()
     }
     
     private func setupView() {
@@ -150,30 +152,55 @@ class ShareView: UIView {
         addGestureRecognizer(pinchGesture)
     }
     
+    private var startPoint: CGFloat? = nil
+    private var endPoint: CGFloat? = nil
     @objc private func didPinch(_ gesture: UIPinchGestureRecognizer) {
-        
-        guard gesture.state == .ended else { return }
-        if isScaling { return }
-        isScaling = true
-        let pinchScale = Float(gesture.scale)
-        let newValue = pinchScale * scaleLevel.value
-        debugPrint("pinchScale value \(pinchScale)")
-        debugPrint("new value \(newValue)")
-        if pinchScale < scaleLevel.value && scaleLevel.isAllowZoomIn {
-            scaleLevel = scaleLevel.previousLevel()
-        } else if newValue > scaleLevel.value && scaleLevel.isAllowZoomOut {
-            scaleLevel = scaleLevel.nextLevel()
-            
+      let pinchScale = Float(gesture.scale)
+      switch gesture.state {
+      case .began:
+        startPoint = gesture.scale
+        break
+      case .failed, .cancelled:
+        startPoint = nil
+        endPoint = nil
+        break
+      case .ended:
+        endPoint = gesture.scale
+        handleState()
+        break
+      default: break
+      }
+    }
+  
+  func handleState() {
+    if isScaling { return }
+    guard let startPoint = startPoint, let endPoint = endPoint else { return }
+    isScaling = true
+    if endPoint < startPoint && scaleLevel.isAllowZoomIn {
+        scaleLevel = scaleLevel.previousLevel()
+        updateView()
+    } else if endPoint > startPoint && scaleLevel.isAllowZoomOut {
+        scaleLevel = scaleLevel.nextLevel()
+        updateView()
+    }
+  }
+  
+    func updateView() {
+      titleLabel.isHidden = !scaleLevel.isShowTitle
+      contentLabel.isHidden = !scaleLevel.isShowContent
+      UIView.animate(withDuration: 0.4, animations: { [weak self] in
+            guard let this = self else { return }
+          
+          if this.scaleLevel == .large {
+            this.contentViewLeadingConstraint?.constant = 10
+            } else {
+            this.contentViewLeadingConstraint?.constant = 80
+          }
+          self?.layoutIfNeeded()
+        }) { [weak self] _ in
+          self?.isScaling = false
         }
-        titleLabel.isHidden = !scaleLevel.isShowTitle
-        contentLabel.isHidden = !scaleLevel.isShowContent
         
-        if scaleLevel == .large {
-            contentViewLeadingConstraint?.constant = 10
-        } else {
-            contentViewLeadingConstraint?.constant = 80
-        }
-        isScaling = false
     }
     
     func getShareContent() -> UIImage {
