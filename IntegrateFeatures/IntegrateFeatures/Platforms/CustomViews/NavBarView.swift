@@ -2,7 +2,7 @@
 //  NavBarView.swift
 //  Share
 //
-//  Created by  [Weak Self] on 11/05/2024.
+//  Created by Lê Thành on 11/05/2024.
 //
 
 import UIKit

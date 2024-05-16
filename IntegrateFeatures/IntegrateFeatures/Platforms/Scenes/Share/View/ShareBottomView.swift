@@ -2,13 +2,13 @@
 //  ShareBottomView.swift
 //  Share
 //
-//  Created by  [Weak Self] on 12/05/2024.
+//  Created by Lê Thành on 12/05/2024.
 //
 
 import UIKit
 
 class ShareBottomView: UIView {
-    
+    var onSelectShareType:((EShareType) -> ())?
     private enum Constants {
         static let height = 280.0
     }
@@ -31,11 +31,13 @@ class ShareBottomView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
+        bindEvent()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupView()
+        bindEvent()
     }
     
     private func setupView() {
@@ -53,6 +55,12 @@ class ShareBottomView: UIView {
         optionsListView.delegate = self.dataSource
         optionsListView.dataSource = self.dataSource
         optionsListView.register(ShareBottomViewCell.self, forCellWithReuseIdentifier: "ShareBottomViewCell")
+    }
+    
+    private func bindEvent() {
+        dataSource.onSelectShareType = {[weak self] type in
+            self?.onSelectShareType?(type)
+        }
     }
     
     func loadData() {

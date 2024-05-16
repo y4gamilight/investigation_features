@@ -7,11 +7,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: BaseViewController {
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
-      
+        super.viewDidLoad()      
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -20,9 +18,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func clickOpenShareView(_ sender: Any) {
-        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "ReliaShareVC") else { return }
-//        vc.modalPresentationStyle = .overFullScreen
-        present(vc, animated: true)
+        navigator.presentReliaShareScreen()
     }
 }
 

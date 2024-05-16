@@ -137,7 +137,6 @@ class ShareView: UIView {
     private func setupView() {
         contentView.backgroundColor = .white
         addSubview(contentView)
-        contentView.frame = .init(x: 0, y: 0, width: 200, height: 136)
         NSLayoutConstraint.activate([
             contentView.centerYAnchor.constraint(equalTo: centerYAnchor),
             contentView.centerXAnchor.constraint(equalTo: centerXAnchor),
@@ -175,5 +174,9 @@ class ShareView: UIView {
             contentViewLeadingConstraint?.constant = 80
         }
         isScaling = false
+    }
+    
+    func getShareContent() -> UIImage {
+        contentView.snapshot()
     }
 }

@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5058EEFC2BF4987400C755CE /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5058EEFB2BF4987400C755CE /* Navigator.swift */; };
+		5058EEFF2BF49A1500C755CE /* NavigatorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5058EEFE2BF49A1500C755CE /* NavigatorImpl.swift */; };
+		5058EF022BF49C0500C755CE /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5058EF012BF49C0500C755CE /* BaseViewController.swift */; };
+		5058EF042BF4A1F900C755CE /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5058EF032BF4A1F900C755CE /* RootViewController.swift */; };
+		5058EF062BF4A32900C755CE /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5058EF052BF4A32900C755CE /* Storyboard.swift */; };
+		50D7C40E2BF45D0100396A0B /* ReliaShareViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D7C40D2BF45D0100396A0B /* ReliaShareViewModel.swift */; };
+		50D7C4112BF461B300396A0B /* LibraryPhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D7C4102BF461B300396A0B /* LibraryPhotoService.swift */; };
 		9F6EB2092BF1D7D60028828A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6EB1E82BF1D7D60028828A /* ViewController.swift */; };
 		9F6EB20A2BF1D7D60028828A /* CenterAlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6EB1ED2BF1D7D60028828A /* CenterAlignedCollectionViewFlowLayout.swift */; };
 		9F6EB20B2BF1D7D60028828A /* ShareBottomViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6EB1EF2BF1D7D60028828A /* ShareBottomViewCell.swift */; };
@@ -52,9 +59,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5058EEFB2BF4987400C755CE /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		5058EEFE2BF49A1500C755CE /* NavigatorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorImpl.swift; sourceTree = "<group>"; };
+		5058EF012BF49C0500C755CE /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		5058EF032BF4A1F900C755CE /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		5058EF052BF4A32900C755CE /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		507217EF2BEF384C00DBDF6D /* IntegrateFeatures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntegrateFeatures.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		507218052BEF384D00DBDF6D /* IntegrateFeaturesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IntegrateFeaturesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5072180F2BEF384D00DBDF6D /* IntegrateFeaturesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IntegrateFeaturesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		50D7C40D2BF45D0100396A0B /* ReliaShareViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReliaShareViewModel.swift; sourceTree = "<group>"; };
+		50D7C4102BF461B300396A0B /* LibraryPhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryPhotoService.swift; sourceTree = "<group>"; };
 		9F6EB1E52BF1D7D60028828A /* ShareUITestsLaunchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9F6EB1E62BF1D7D60028828A /* ShareUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareUITests.swift; sourceTree = "<group>"; };
 		9F6EB1E82BF1D7D60028828A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +122,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5058EEFA2BF4986400C755CE /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				5058EF002BF49BE700C755CE /* Base */,
+				50D7C40F2BF45FC100396A0B /* Services */,
+				5058EEFD2BF4988000C755CE /* Navigator */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		5058EEFD2BF4988000C755CE /* Navigator */ = {
+			isa = PBXGroup;
+			children = (
+				5058EEFB2BF4987400C755CE /* Navigator.swift */,
+				5058EEFE2BF49A1500C755CE /* NavigatorImpl.swift */,
+				5058EF052BF4A32900C755CE /* Storyboard.swift */,
+			);
+			path = Navigator;
+			sourceTree = "<group>";
+		};
+		5058EF002BF49BE700C755CE /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				5058EF012BF49C0500C755CE /* BaseViewController.swift */,
+				5058EF032BF4A1F900C755CE /* RootViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		507217E62BEF384C00DBDF6D = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +171,22 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		50D7C40C2BF45AA200396A0B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				50D7C40D2BF45D0100396A0B /* ReliaShareViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		50D7C40F2BF45FC100396A0B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				50D7C4102BF461B300396A0B /* LibraryPhotoService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		9F6EB1E42BF1D7D60028828A /* IntegrateFeaturesUITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +199,7 @@
 		9F6EB1E72BF1D7D60028828A /* IntegrateFeatures */ = {
 			isa = PBXGroup;
 			children = (
+				5058EEFA2BF4986400C755CE /* Core */,
 				9F6EB2212BF1EC4C0028828A /* Public */,
 				9F6EB1E82BF1D7D60028828A /* ViewController.swift */,
 				9F6EB1E92BF1D7D60028828A /* Platforms */,
@@ -169,6 +229,7 @@
 		9F6EB1EB2BF1D7D60028828A /* Share */ = {
 			isa = PBXGroup;
 			children = (
+				50D7C40C2BF45AA200396A0B /* ViewModels */,
 				9F6EB1EC2BF1D7D60028828A /* DataSources */,
 				9F6EB1EE2BF1D7D60028828A /* Cells */,
 				9F6EB1F02BF1D7D60028828A /* Models */,
@@ -430,18 +491,25 @@
 				9F6EB2152BF1D7D60028828A /* AppDelegate.swift in Sources */,
 				9F6EB22B2BF2075B0028828A /* UIImageView+Ext.swift in Sources */,
 				9F6EB2292BF2013C0028828A /* ShareItemModel.swift in Sources */,
+				5058EF062BF4A32900C755CE /* Storyboard.swift in Sources */,
 				9F6EB2242BF1EC620028828A /* Color+Ext.swift in Sources */,
+				5058EF022BF49C0500C755CE /* BaseViewController.swift in Sources */,
+				5058EEFC2BF4987400C755CE /* Navigator.swift in Sources */,
 				9F6EB20A2BF1D7D60028828A /* CenterAlignedCollectionViewFlowLayout.swift in Sources */,
 				9F6EB2102BF1D7D60028828A /* ShareBottomView.swift in Sources */,
 				9F6EB2202BF1EC220028828A /* AppColors.swift in Sources */,
 				9F6EB2092BF1D7D60028828A /* ViewController.swift in Sources */,
+				50D7C4112BF461B300396A0B /* LibraryPhotoService.swift in Sources */,
+				5058EEFF2BF49A1500C755CE /* NavigatorImpl.swift in Sources */,
 				9F6EB20B2BF1D7D60028828A /* ShareBottomViewCell.swift in Sources */,
 				9F6EB20C2BF1D7D60028828A /* EShareType.swift in Sources */,
+				5058EF042BF4A1F900C755CE /* RootViewController.swift in Sources */,
 				9F6EB2112BF1D7D60028828A /* NavBarView.swift in Sources */,
 				9F6EB22D2BF209540028828A /* UIView+Ext.swift in Sources */,
 				9F6EB2172BF1D7D60028828A /* SceneDelegate.swift in Sources */,
 				9F6EB21D2BF1E84C0028828A /* ShareBottomViewDataSource.swift in Sources */,
 				9F6EB22F2BF209AB0028828A /* AppFonts.swift in Sources */,
+				50D7C40E2BF45D0100396A0B /* ReliaShareViewModel.swift in Sources */,
 				9F6EB20F2BF1D7D60028828A /* ShareView.swift in Sources */,
 				9F6EB20E2BF1D7D60028828A /* ReliaShareVC.swift in Sources */,
 				9F6EB20D2BF1D7D60028828A /* ShareBottomItemModel.swift in Sources */,
@@ -626,12 +694,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7755R4CX4U;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = IntegrateFeatures/Application/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We need access to your photo library to save images.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
@@ -655,12 +723,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7755R4CX4U;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = IntegrateFeatures/Application/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We need access to your photo library to save images.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;

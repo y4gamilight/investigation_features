@@ -13,6 +13,8 @@ class ShareBottomViewDataSource: NSObject {
         static let sectionInsets = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
         
     }
+    var onSelectShareType:((EShareType) -> ())?
+    
     private var items: [ShareBottomViewItemModel] = []
     func update(items: [ShareBottomViewItemModel]) {
         self.items = items
@@ -63,6 +65,15 @@ extension ShareBottomViewDataSource: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return Constants.sectionInsets
+    }
+}
+
+extension ShareBottomViewDataSource: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let itemsInSection = getItemsPerSection(indexPath.section)
+        let item = itemsInSection[indexPath.row]
+        
+        onSelectShareType?(item.type)
     }
 }
 

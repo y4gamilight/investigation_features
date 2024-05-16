@@ -10,8 +10,10 @@ import UIKit
 struct ShareBottomViewItemModel {
     var image: UIImage
     var content: String
+    var type: EShareType
     init(type: EShareType) {
         self.image = type.image
         self.content = type.content
+        self.type = type
     }
 }
