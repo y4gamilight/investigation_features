@@ -17,10 +17,13 @@ protocol InstagramShareService {
 }
 
 class InstagramShareServiceImp: InstagramShareService {
-    
-    private enum Constants {
+    private enum Params {
         static let schemeUrl = "instagram-stories"
         static let path = "share"
+        static let querySource = "source_application"
+    }
+    private enum Constants {
+        static let facebookAppID = "<YOUR_APP_ID>"
     }
     
     func shareToStory(_ info: [InstagramShareParamKey: Any]){
@@ -36,8 +39,8 @@ class InstagramShareServiceImp: InstagramShareService {
         ]
         
         UIPasteboard.general.setItems([pasteboardItems], options: pasteboardOptions)
-        
-        if let url = URL(string: "\(Constants.schemeUrl)://\(Constants.path)") {
+        let urlString = "\(Params.schemeUrl)://\(Params.path)?\(Params.querySource)=\(Constants.facebookAppID)"
+        if let url = URL(string: urlString) {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
     }

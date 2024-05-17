@@ -13,13 +13,13 @@ protocol WhatAppShareService {
 
 class WhatAppShareServiceImp: WhatAppShareService {
     
-    private enum Constants {
+    private enum Params {
         static let schemeUrl = "whatsapp"
         static let path = "send"
     }
     
     func shareLink(_ text: String) {
-        if var url = URL(string: "\(Constants.schemeUrl)://\(Constants.path)") {
+        if var url = URL(string: "\(Params.schemeUrl)://\(Params.path)") {
             if #available(iOS 16.0, *) {
                 url.append(queryItems: [URLQueryItem(name: "text", value: text)])
             } else {
