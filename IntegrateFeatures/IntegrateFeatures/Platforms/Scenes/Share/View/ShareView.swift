@@ -155,7 +155,6 @@ class ShareView: UIView {
     private var startPoint: CGFloat? = nil
     private var endPoint: CGFloat? = nil
     @objc private func didPinch(_ gesture: UIPinchGestureRecognizer) {
-      let pinchScale = Float(gesture.scale)
       switch gesture.state {
       case .began:
         startPoint = gesture.scale

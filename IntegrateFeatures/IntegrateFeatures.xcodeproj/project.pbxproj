@@ -39,6 +39,8 @@
 		9F6EB22B2BF2075B0028828A /* UIImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6EB22A2BF2075B0028828A /* UIImageView+Ext.swift */; };
 		9F6EB22D2BF209540028828A /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6EB22C2BF209540028828A /* UIView+Ext.swift */; };
 		9F6EB22F2BF209AB0028828A /* AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6EB22E2BF209AB0028828A /* AppFonts.swift */; };
+		9F71BD352BF68154005161A8 /* WhatAppShareService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F71BD342BF68154005161A8 /* WhatAppShareService.swift */; };
+		9FC962012BF6656800EED8AC /* InstagramShareService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC962002BF6656800EED8AC /* InstagramShareService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,8 @@
 		9F6EB22A2BF2075B0028828A /* UIImageView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ext.swift"; sourceTree = "<group>"; };
 		9F6EB22C2BF209540028828A /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		9F6EB22E2BF209AB0028828A /* AppFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFonts.swift; sourceTree = "<group>"; };
+		9F71BD342BF68154005161A8 /* WhatAppShareService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatAppShareService.swift; sourceTree = "<group>"; };
+		9FC962002BF6656800EED8AC /* InstagramShareService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramShareService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +186,8 @@
 		50D7C40F2BF45FC100396A0B /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				9F71BD332BF68144005161A8 /* Whatsapp */,
+				9FC961FF2BF6654E00EED8AC /* Instagram */,
 				50D7C4102BF461B300396A0B /* LibraryPhotoService.swift */,
 			);
 			path = Services;
@@ -348,6 +354,22 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		9F71BD332BF68144005161A8 /* Whatsapp */ = {
+			isa = PBXGroup;
+			children = (
+				9F71BD342BF68154005161A8 /* WhatAppShareService.swift */,
+			);
+			path = Whatsapp;
+			sourceTree = "<group>";
+		};
+		9FC961FF2BF6654E00EED8AC /* Instagram */ = {
+			isa = PBXGroup;
+			children = (
+				9FC962002BF6656800EED8AC /* InstagramShareService.swift */,
+			);
+			path = Instagram;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -479,6 +501,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FC962012BF6656800EED8AC /* InstagramShareService.swift in Sources */,
 				9F6EB2272BF200090028828A /* EShareItemScaleLevel.swift in Sources */,
 				9F6EB2152BF1D7D60028828A /* AppDelegate.swift in Sources */,
 				9F6EB22B2BF2075B0028828A /* UIImageView+Ext.swift in Sources */,
@@ -487,6 +510,7 @@
 				9F6EB2242BF1EC620028828A /* Color+Ext.swift in Sources */,
 				5058EF022BF49C0500C755CE /* BaseViewController.swift in Sources */,
 				5058EEFC2BF4987400C755CE /* Navigator.swift in Sources */,
+				9F71BD352BF68154005161A8 /* WhatAppShareService.swift in Sources */,
 				9F6EB20A2BF1D7D60028828A /* CenterAlignedCollectionViewFlowLayout.swift in Sources */,
 				9F6EB2102BF1D7D60028828A /* ShareBottomView.swift in Sources */,
 				9F6EB2202BF1EC220028828A /* AppColors.swift in Sources */,
@@ -684,9 +708,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = ULX47LM226;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = IntegrateFeatures/Application/Info.plist;
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We need access to your photo library to save images.";
@@ -700,8 +726,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.y4gamilight.integration.features;
+				PRODUCT_BUNDLE_IDENTIFIER = com.y4gamilight.spyagent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "match development com.y4gamilight.spyagent";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -713,9 +741,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = ULX47LM226;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = IntegrateFeatures/Application/Info.plist;
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We need access to your photo library to save images.";
@@ -729,8 +759,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.y4gamilight.integration.features;
+				PRODUCT_BUNDLE_IDENTIFIER = com.y4gamilight.spyagent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "match development com.y4gamilight.spyagent";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

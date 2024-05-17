@@ -18,13 +18,24 @@ class ReliaShareViewModel: NSObject {
         return helper
     }()
     
+    private var instagramService: InstagramShareService
+    private var whatappService: WhatAppShareService
+    
+    init (instagramService: InstagramShareService, whatappService: WhatAppShareService) {
+        self.instagramService = instagramService
+        self.whatappService = whatappService
+    }
+    
+    
     func handleShare(to type: EShareType, with content: UIImage) {
         switch type {
         case .messages:
             handleShareContentOnMessages(content)
         case .instagram:
+            handleShareContentOnInstagram(content)
             break
         case .whatsApp:
+            handleShareContentOnWebapp("Teata eat")
             break
         case .saveImage:
             handleSaveImageToPhotoLibrary(content)
@@ -43,6 +54,18 @@ class ReliaShareViewModel: NSObject {
         let mimeType = "image/png"
         let imageName = "image.png"
         onBeginShareOnMessages?(contentData, mimeType, imageName)
+    }
+    
+    private func handleShareContentOnInstagram(_ image: UIImage) {
+        guard let data = image.pngData() else { return }
+        let info = [
+            InstagramShareParamKey.backgroundImage: data
+        ]
+        instagramService.shareToStory(info)
+    }
+    
+    private func handleShareContentOnWebapp(_ sale: String) {
+        whatappService.shareLink(sale)
     }
 }
 

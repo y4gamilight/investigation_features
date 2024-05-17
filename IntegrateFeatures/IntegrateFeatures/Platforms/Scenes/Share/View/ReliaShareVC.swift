@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class ReliaShareVC: BaseViewController {
-    private var viewModel: ReliaShareViewModel = ReliaShareViewModel()
+    private var viewModel: ReliaShareViewModel = ReliaShareViewModel(instagramService: InstagramShareServiceImp(), whatappService: WhatAppShareServiceImp())
     private lazy var navBar: NavBarView = {
         let view = NavBarView()
         view.prepareData(title: "Share", backIcon: "")
