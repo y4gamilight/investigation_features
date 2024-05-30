@@ -37,4 +37,10 @@ class NavigatorImpl: Navigator {
         vc.completionWithItemsHandler = completionWithItemsHandler
         parent.present(vc, animated: true)
     }
+    
+    func presentReliaNativeAdScreen() {
+        let vc = Storyboard.main.instantiateViewController(withIdentifier: "ReliaNativeAdsVC") as! ReliaNativeAdsVC
+        vc.navigator = NavigatorImpl(navController: navController)
+        navController.present(vc, animated: true)
+    }
 }

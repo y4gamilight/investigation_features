@@ -40,6 +40,8 @@
 		9F6EB22D2BF209540028828A /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6EB22C2BF209540028828A /* UIView+Ext.swift */; };
 		9F6EB22F2BF209AB0028828A /* AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6EB22E2BF209AB0028828A /* AppFonts.swift */; };
 		9F71BD352BF68154005161A8 /* WhatAppShareService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F71BD342BF68154005161A8 /* WhatAppShareService.swift */; };
+		9F8C0F732C082D9F009C1F69 /* ReliaNativeAdsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8C0F722C082D9F009C1F69 /* ReliaNativeAdsVC.swift */; };
+		9F8C0F772C082DEE009C1F69 /* ReliaNativeAdViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8C0F762C082DEE009C1F69 /* ReliaNativeAdViewModel.swift */; };
 		9FC962012BF6656800EED8AC /* InstagramShareService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC962002BF6656800EED8AC /* InstagramShareService.swift */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +100,8 @@
 		9F6EB22C2BF209540028828A /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		9F6EB22E2BF209AB0028828A /* AppFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFonts.swift; sourceTree = "<group>"; };
 		9F71BD342BF68154005161A8 /* WhatAppShareService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatAppShareService.swift; sourceTree = "<group>"; };
+		9F8C0F722C082D9F009C1F69 /* ReliaNativeAdsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReliaNativeAdsVC.swift; sourceTree = "<group>"; };
+		9F8C0F762C082DEE009C1F69 /* ReliaNativeAdViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReliaNativeAdViewModel.swift; sourceTree = "<group>"; };
 		9FC962002BF6656800EED8AC /* InstagramShareService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramShareService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -227,6 +231,7 @@
 		9F6EB1EA2BF1D7D60028828A /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				9F8C0F712C082CDE009C1F69 /* NativeAds */,
 				9F6EB1EB2BF1D7D60028828A /* Share */,
 			);
 			path = Scenes;
@@ -360,6 +365,31 @@
 				9F71BD342BF68154005161A8 /* WhatAppShareService.swift */,
 			);
 			path = Whatsapp;
+			sourceTree = "<group>";
+		};
+		9F8C0F712C082CDE009C1F69 /* NativeAds */ = {
+			isa = PBXGroup;
+			children = (
+				9F8C0F752C082DD2009C1F69 /* ViewModel */,
+				9F8C0F742C082DCB009C1F69 /* View */,
+			);
+			path = NativeAds;
+			sourceTree = "<group>";
+		};
+		9F8C0F742C082DCB009C1F69 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9F8C0F722C082D9F009C1F69 /* ReliaNativeAdsVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9F8C0F752C082DD2009C1F69 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9F8C0F762C082DEE009C1F69 /* ReliaNativeAdViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		9FC961FF2BF6654E00EED8AC /* Instagram */ = {
@@ -525,10 +555,12 @@
 				9F6EB2172BF1D7D60028828A /* SceneDelegate.swift in Sources */,
 				9F6EB21D2BF1E84C0028828A /* ShareBottomViewDataSource.swift in Sources */,
 				9F6EB22F2BF209AB0028828A /* AppFonts.swift in Sources */,
+				9F8C0F772C082DEE009C1F69 /* ReliaNativeAdViewModel.swift in Sources */,
 				50D7C40E2BF45D0100396A0B /* ReliaShareViewModel.swift in Sources */,
 				9F6EB20F2BF1D7D60028828A /* ShareView.swift in Sources */,
 				9F6EB20E2BF1D7D60028828A /* ReliaShareVC.swift in Sources */,
 				9F6EB20D2BF1D7D60028828A /* ShareBottomItemModel.swift in Sources */,
+				9F8C0F732C082D9F009C1F69 /* ReliaNativeAdsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

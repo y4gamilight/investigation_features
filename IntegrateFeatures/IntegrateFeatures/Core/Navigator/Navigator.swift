@@ -10,6 +10,7 @@ import MessageUI
 
 protocol Navigator {
     func presentReliaShareScreen()
+    func presentReliaNativeAdScreen()
     
     func presentMFMessageComposeScreen(parent: UIViewController,
                                        _ contentData: Data,

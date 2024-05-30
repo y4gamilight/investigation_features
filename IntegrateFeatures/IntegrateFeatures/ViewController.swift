@@ -20,6 +20,10 @@ class ViewController: BaseViewController {
     @IBAction func clickOpenShareView(_ sender: Any) {
         navigator.presentReliaShareScreen()
     }
+    
+    @IBAction func clickOpenNativeAdView(_ sender: Any) {
+        navigator.presentReliaNativeAdScreen()
+    }
 }
 
 
