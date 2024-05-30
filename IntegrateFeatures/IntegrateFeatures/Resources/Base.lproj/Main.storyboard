@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,10 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="beF-Z6-M5R">
-                                <rect key="frame" x="0.0" y="59.000000000000007" width="393" height="68.666666666666686"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x5f-zc-nOI">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="34.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="379.66666666666669"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Share"/>
                                         <connections>
@@ -29,7 +30,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N8E-49-lgO">
-                                        <rect key="frame" x="0.0" y="34.333333333333329" width="393" height="34.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="379.66666666666674" width="393" height="379.33333333333326"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="8Yp-69-NJo"/>
                                         </constraints>
@@ -78,9 +79,49 @@
                     <view key="view" contentMode="scaleToFill" id="xxe-J3-TGi">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Gap-3f-oqH">
+                                <rect key="frame" x="0.0" y="58.999999999999972" width="393" height="511.33333333333326"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rr0-VJ-eWB">
+                                <rect key="frame" x="0.0" y="570.33333333333337" width="393" height="247.66666666666663"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="W3E-gB-Cs0">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="2s9-7b-42L">
+                                        <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="6yc-zT-Oj6">
+                                            <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="cqr-GW-MWh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Gap-3f-oqH" firstAttribute="height" secondItem="xxe-J3-TGi" secondAttribute="height" multiplier="0.6" id="4Jd-Qh-nb9"/>
+                            <constraint firstItem="Gap-3f-oqH" firstAttribute="top" secondItem="cqr-GW-MWh" secondAttribute="top" id="7Lu-dy-X8c"/>
+                            <constraint firstItem="rr0-VJ-eWB" firstAttribute="leading" secondItem="cqr-GW-MWh" secondAttribute="leading" id="Aki-9A-MUf"/>
+                            <constraint firstItem="cqr-GW-MWh" firstAttribute="bottom" secondItem="rr0-VJ-eWB" secondAttribute="bottom" id="GCq-rb-8TW"/>
+                            <constraint firstItem="Gap-3f-oqH" firstAttribute="leading" secondItem="cqr-GW-MWh" secondAttribute="leading" id="GS5-aC-vIm"/>
+                            <constraint firstItem="rr0-VJ-eWB" firstAttribute="top" secondItem="Gap-3f-oqH" secondAttribute="bottom" id="Q6n-h6-rzB"/>
+                            <constraint firstItem="cqr-GW-MWh" firstAttribute="trailing" secondItem="Gap-3f-oqH" secondAttribute="trailing" id="cPW-6V-SCY"/>
+                            <constraint firstItem="cqr-GW-MWh" firstAttribute="trailing" secondItem="rr0-VJ-eWB" secondAttribute="trailing" id="jHE-DG-br0"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="rr0-VJ-eWB" id="ApR-s8-QQk"/>
+                        <outlet property="tableView" destination="Gap-3f-oqH" id="mG8-44-FcF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cay-LW-3le" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
