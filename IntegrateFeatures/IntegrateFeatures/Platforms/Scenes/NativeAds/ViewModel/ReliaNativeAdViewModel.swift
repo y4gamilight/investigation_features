@@ -10,7 +10,7 @@ import Foundation
 class ReliaNativeAdViewModel: NSObject{
     var onLoadTableCell: (([ReliaNativeCellItem]) -> Void)?
     var onLoadCollectionCell: (([ReliaNativeCollectionItem]) -> Void)?
-    
+    var
     func loadData() {
         loadCellItems()
         loadCollectionItems()

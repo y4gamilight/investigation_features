@@ -40,6 +40,7 @@ class ReliaNativeAdsVC: BaseViewController {
     override func configuration() {
         tableView.delegate = dataSource
         tableView.dataSource = dataSource
+        tableView.estimatedRowHeight = UITableView.automaticDimension
         collectionView.dataSource = dataSource
         collectionView.delegate = dataSource
         
