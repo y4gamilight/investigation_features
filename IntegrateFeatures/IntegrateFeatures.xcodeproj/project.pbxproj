@@ -20,6 +20,7 @@
 		9F63925F2C0853DB0034B495 /* ReliaNativeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F63925D2C0853DB0034B495 /* ReliaNativeTableCell.swift */; };
 		9F6392602C0853DB0034B495 /* ReliaNativeTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F63925E2C0853DB0034B495 /* ReliaNativeTableCell.xib */; };
 		9F6392652C08579B0034B495 /* ReliaNativeCollectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6392642C08579B0034B495 /* ReliaNativeCollectionItem.swift */; };
+		9F3D8BFC2C063AE70065F1F1 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 9F3D8BFB2C063AE70065F1F1 /* GoogleMobileAds */; };
 		9F6EB2092BF1D7D60028828A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6EB1E82BF1D7D60028828A /* ViewController.swift */; };
 		9F6EB20A2BF1D7D60028828A /* CenterAlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6EB1ED2BF1D7D60028828A /* CenterAlignedCollectionViewFlowLayout.swift */; };
 		9F6EB20B2BF1D7D60028828A /* ShareBottomViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6EB1EF2BF1D7D60028828A /* ShareBottomViewCell.swift */; };
@@ -49,6 +50,8 @@
 		9F898E3C2C0836F90059E53B /* ReliaNativeAdDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F898E3B2C0836F90059E53B /* ReliaNativeAdDataSource.swift */; };
 		9F8C0F732C082D9F009C1F69 /* ReliaNativeAdsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8C0F722C082D9F009C1F69 /* ReliaNativeAdsVC.swift */; };
 		9F8C0F772C082DEE009C1F69 /* ReliaNativeAdViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8C0F762C082DEE009C1F69 /* ReliaNativeAdViewModel.swift */; };
+		9F8BE0632C06410300DCE0DD /* AdmobService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8BE0622C06410300DCE0DD /* AdmobService.swift */; };
+		9F8BE0662C06998D00DCE0DD /* Y4gAdmob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8BE0652C06998D00DCE0DD /* Y4gAdmob.swift */; };
 		9FC962012BF6656800EED8AC /* InstagramShareService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC962002BF6656800EED8AC /* InstagramShareService.swift */; };
 /* End PBXBuildFile section */
 
@@ -116,6 +119,8 @@
 		9F898E3B2C0836F90059E53B /* ReliaNativeAdDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReliaNativeAdDataSource.swift; sourceTree = "<group>"; };
 		9F8C0F722C082D9F009C1F69 /* ReliaNativeAdsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReliaNativeAdsVC.swift; sourceTree = "<group>"; };
 		9F8C0F762C082DEE009C1F69 /* ReliaNativeAdViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReliaNativeAdViewModel.swift; sourceTree = "<group>"; };
+		9F8BE0622C06410300DCE0DD /* AdmobService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdmobService.swift; sourceTree = "<group>"; };
+		9F8BE0652C06998D00DCE0DD /* Y4gAdmob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Y4gAdmob.swift; sourceTree = "<group>"; };
 		9FC962002BF6656800EED8AC /* InstagramShareService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramShareService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,6 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F3D8BFC2C063AE70065F1F1 /* GoogleMobileAds in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +373,8 @@
 		9F6EB2212BF1EC4C0028828A /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				9F8BE0642C06994E00DCE0DD /* Modules */,
+				9F8BE05E2C0640E400DCE0DD /* Services */,
 				9F6EB2222BF1EC590028828A /* Extensions */,
 			);
 			path = Public;
@@ -429,6 +437,30 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		9F8BE05E2C0640E400DCE0DD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9F8BE0612C0640F900DCE0DD /* Admob */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9F8BE0612C0640F900DCE0DD /* Admob */ = {
+			isa = PBXGroup;
+			children = (
+				9F8BE0622C06410300DCE0DD /* AdmobService.swift */,
+			);
+			path = Admob;
+			sourceTree = "<group>";
+		};
+		9F8BE0642C06994E00DCE0DD /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				9F8BE0652C06998D00DCE0DD /* Y4gAdmob.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
 		9FC961FF2BF6654E00EED8AC /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
@@ -453,6 +485,9 @@
 			dependencies = (
 			);
 			name = IntegrateFeatures;
+			packageProductDependencies = (
+				9F3D8BFB2C063AE70065F1F1 /* GoogleMobileAds */,
+			);
 			productName = Share;
 			productReference = 507217EF2BEF384C00DBDF6D /* IntegrateFeatures.app */;
 			productType = "com.apple.product-type.application";
@@ -525,6 +560,9 @@
 				Base,
 			);
 			mainGroup = 507217E62BEF384C00DBDF6D;
+			packageReferences = (
+				9F3D8BFA2C063AE70065F1F1 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+			);
 			productRefGroup = 507217F02BEF384C00DBDF6D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -574,6 +612,7 @@
 				9F6EB2272BF200090028828A /* EShareItemScaleLevel.swift in Sources */,
 				9F6EB2152BF1D7D60028828A /* AppDelegate.swift in Sources */,
 				9F6EB22B2BF2075B0028828A /* UIImageView+Ext.swift in Sources */,
+				9F8BE0632C06410300DCE0DD /* AdmobService.swift in Sources */,
 				9F6EB2292BF2013C0028828A /* ShareItemModel.swift in Sources */,
 				5058EF062BF4A32900C755CE /* Storyboard.swift in Sources */,
 				9F6EB2242BF1EC620028828A /* Color+Ext.swift in Sources */,
@@ -595,6 +634,7 @@
 				9F6392542C0853090034B495 /* ReliaNativeCellItem.swift in Sources */,
 				9F6EB2112BF1D7D60028828A /* NavBarView.swift in Sources */,
 				9F6EB22D2BF209540028828A /* UIView+Ext.swift in Sources */,
+				9F8BE0662C06998D00DCE0DD /* Y4gAdmob.swift in Sources */,
 				9F6EB2172BF1D7D60028828A /* SceneDelegate.swift in Sources */,
 				9F6EB21D2BF1E84C0028828A /* ShareBottomViewDataSource.swift in Sources */,
 				9F6EB22F2BF209AB0028828A /* AppFonts.swift in Sources */,
@@ -957,6 +997,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9F3D8BFA2C063AE70065F1F1 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9F3D8BFB2C063AE70065F1F1 /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9F3D8BFA2C063AE70065F1F1 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 507217E72BEF384C00DBDF6D /* Project object */;
 }
