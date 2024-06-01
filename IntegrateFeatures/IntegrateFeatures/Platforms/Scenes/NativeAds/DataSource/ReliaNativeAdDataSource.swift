@@ -30,9 +30,16 @@ extension ReliaNativeAdDataSource: UICollectionViewDelegate, UICollectionViewDat
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ReliaNativeCollectionCell.identifier, for: indexPath) as! ReliaNativeCollectionCell
-        cell.model = self.collectionItems[indexPath.row]
-        return cell
+        let model = self.collectionItems[indexPath.row]
+        if model.isAds {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ReliaNativeAdsCollectionCell.identifier, for: indexPath) as! ReliaNativeAdsCollectionCell
+            cell.model = model
+            return cell
+        } else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ReliaNativeCollectionCell.identifier, for: indexPath) as! ReliaNativeCollectionCell
+            cell.model = model
+            return cell
+        }
     }
 }
 
@@ -42,8 +49,15 @@ extension ReliaNativeAdDataSource: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: ReliaNativeTableCell.identifier) as! ReliaNativeTableCell
-        cell.model = self.cellItems[indexPath.row]
-        return cell
+        let model = self.cellItems[indexPath.row]
+        if model.isAds {
+            let cell = tableView.dequeueReusableCell(withIdentifier: ReliaNativeAdsTableCell.identifier) as! ReliaNativeAdsTableCell
+            cell.model = model
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: ReliaNativeTableCell.identifier) as! ReliaNativeTableCell
+            cell.model = model
+            return cell
+        }
     }
 }

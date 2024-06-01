@@ -7,29 +7,25 @@
 
 import UIKit
 import GoogleMobileAds
+import Combine
 
 protocol IAdmobService {
+    var ads: PassthroughSubject<[GADNativeAd], Error> { get }
     func loadNativeAd(in viewController: UIViewController)
-    //    func addObserver(_ observer: AdRewardVideoManageDelegate)
-    //    func removeObserver(_ observer:AdRewardVideoManageDelegate)
 }
 
 class AdmobServiceImp: IAdmobService {
-    
     private var nativeAd: Y4gAdmobNativeAd
     init() {
-        self.nativeAd = Y4gAdmobNativeAd(adUnitId: "")
+        let adUnitId = Bundle.main.object(forInfoDictionaryKey: "GADNativeAdUnit") as? String
+        self.nativeAd = Y4gAdmobNativeAd(adUnitId: adUnitId ?? "")
     }
     
     func loadNativeAd(in viewController: UIViewController) {
         nativeAd.loadAds(in: viewController)
     }
-//
-//    func addObserver(_ observer: AdRewardVideoManageDelegate) {
-//        adsRewardVideo?.addObserver(observer)
-//    }
-//    
-//    func removeObserver(_ observer:AdRewardVideoManageDelegate) {
-//        adsRewardVideo?.removeObserver(observer)
-//    }
+
+    var ads: PassthroughSubject<[GADNativeAd], Error> {
+        return nativeAd.listAds
+    }
 }

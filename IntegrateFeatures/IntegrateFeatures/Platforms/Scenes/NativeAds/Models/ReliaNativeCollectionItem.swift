@@ -6,8 +6,11 @@
 //
 
 import Foundation
+import GoogleMobileAds
 
 struct ReliaNativeCollectionItem {
     let title: String
     let subTitle: String
+    let isAds: Bool
+    let ads: GADNativeAd?
 }
