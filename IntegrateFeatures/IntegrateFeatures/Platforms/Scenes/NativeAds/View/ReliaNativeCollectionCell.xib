@@ -22,13 +22,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="284" height="195"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqa-hw-0Qi">
-                                <rect key="frame" x="0.0" y="0.0" width="284" height="174"/>
+                                <rect key="frame" x="16" y="16" width="252" height="142"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kP-7g-8tZ">
-                                <rect key="frame" x="0.0" y="174" width="284" height="21"/>
+                                <rect key="frame" x="16" y="158" width="252" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -37,12 +37,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="1kP-7g-8tZ" firstAttribute="top" secondItem="aqa-hw-0Qi" secondAttribute="bottom" id="9af-E9-azY"/>
-                            <constraint firstItem="aqa-hw-0Qi" firstAttribute="leading" secondItem="NNS-HA-MFR" secondAttribute="leading" id="Cqj-lu-trz"/>
-                            <constraint firstItem="aqa-hw-0Qi" firstAttribute="top" secondItem="NNS-HA-MFR" secondAttribute="top" id="FnN-0c-Owd"/>
-                            <constraint firstItem="1kP-7g-8tZ" firstAttribute="leading" secondItem="NNS-HA-MFR" secondAttribute="leading" id="Q6j-kY-t28"/>
-                            <constraint firstAttribute="trailing" secondItem="aqa-hw-0Qi" secondAttribute="trailing" id="bLW-tU-ti6"/>
-                            <constraint firstAttribute="trailing" secondItem="1kP-7g-8tZ" secondAttribute="trailing" id="cLh-NA-zcz"/>
-                            <constraint firstAttribute="bottom" secondItem="1kP-7g-8tZ" secondAttribute="bottom" id="m1f-y4-b8E"/>
+                            <constraint firstItem="aqa-hw-0Qi" firstAttribute="leading" secondItem="NNS-HA-MFR" secondAttribute="leading" constant="16" id="Cqj-lu-trz"/>
+                            <constraint firstItem="aqa-hw-0Qi" firstAttribute="top" secondItem="NNS-HA-MFR" secondAttribute="top" constant="16" id="FnN-0c-Owd"/>
+                            <constraint firstItem="1kP-7g-8tZ" firstAttribute="leading" secondItem="NNS-HA-MFR" secondAttribute="leading" constant="16" id="Q6j-kY-t28"/>
+                            <constraint firstAttribute="trailing" secondItem="aqa-hw-0Qi" secondAttribute="trailing" constant="16" id="bLW-tU-ti6"/>
+                            <constraint firstAttribute="trailing" secondItem="1kP-7g-8tZ" secondAttribute="trailing" constant="16" id="cLh-NA-zcz"/>
+                            <constraint firstAttribute="bottom" secondItem="1kP-7g-8tZ" secondAttribute="bottom" constant="16" id="m1f-y4-b8E"/>
                         </constraints>
                     </view>
                 </subviews>

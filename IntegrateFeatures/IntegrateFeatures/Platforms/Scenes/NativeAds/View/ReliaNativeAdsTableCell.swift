@@ -1,29 +1,33 @@
 //
-//  ReliaNativeTableCell.swift
+//  ReliaNativeAdsTableCell.swift
 //  IntegrateFeatures
 //
-//  Created by Lê Thành on 30/05/2024.
+//  Created by Lê Thành on 01/06/2024.
 //
 
 import UIKit
 
-class ReliaNativeTableCell: UITableViewCell {
-    
-    static let nibName = "ReliaNativeTableCell"
-    static let identifier = "ReliaNativeTableCell"
+class ReliaNativeAdsTableCell: UITableViewCell {
+    static let nibName = "ReliaNativeAdsTableCell"
+    static let identifier = "ReliaNativeAdsTableCell"
+
+    @IBOutlet weak var adsImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     
     private var _model: ReliaNativeCellItem!
-    
     var model: ReliaNativeCellItem {
-        get { return _model }
+        get {
+            return _model
+        }
         set {
+            adsImageView.image = newValue.ads?.images?.first?.image ?? UIImage()
+            titleLabel.text = newValue.title
+            subtitleLabel.text = newValue.subTitle
             _model = newValue
-            titleLabel.text = _model.title
-            subtitleLabel.text = _model.subTitle
         }
     }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
