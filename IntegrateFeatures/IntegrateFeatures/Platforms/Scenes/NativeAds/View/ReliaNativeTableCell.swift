@@ -13,6 +13,7 @@ class ReliaNativeTableCell: UITableViewCell {
     static let identifier = "ReliaNativeTableCell"
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
+    @IBOutlet weak var containerView: UIView!
     
     private var _model: ReliaNativeCellItem!
     
@@ -27,6 +28,9 @@ class ReliaNativeTableCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        containerView.layer.cornerRadius = 16
+        containerView.layer.backgroundColor = UIColor(hex: "e4e7e9").cgColor
+        selectionStyle = .none
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

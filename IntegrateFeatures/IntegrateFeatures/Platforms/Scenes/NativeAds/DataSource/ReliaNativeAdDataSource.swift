@@ -51,9 +51,16 @@ extension ReliaNativeAdDataSource: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let model = self.cellItems[indexPath.row]
         if model.isAds {
-            let cell = tableView.dequeueReusableCell(withIdentifier: ReliaNativeAdsTableCell.identifier) as! ReliaNativeAdsTableCell
-            cell.model = model
-            return cell
+            if indexPath.row % 5 == 0 {
+                let cell = tableView.dequeueReusableCell(withIdentifier: NativeAdViewCell.identifier) as! NativeAdViewCell
+                cell.model = model
+                return cell
+            } else {
+                let cell = tableView.dequeueReusableCell(withIdentifier: ReliaNativeAdsTableCell.identifier) as! ReliaNativeAdsTableCell
+                cell.model = model
+                return cell
+                
+            }
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: ReliaNativeTableCell.identifier) as! ReliaNativeTableCell
             cell.model = model

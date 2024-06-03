@@ -51,6 +51,8 @@
 		9F7E43A22C0B375B00484282 /* ReliaNativeAdsTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F7E43A02C0B375B00484282 /* ReliaNativeAdsTableCell.xib */; };
 		9F7E43A52C0B3C7800484282 /* ReliaNativeAdsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E43A32C0B3C7800484282 /* ReliaNativeAdsCollectionCell.swift */; };
 		9F7E43A62C0B3C7800484282 /* ReliaNativeAdsCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F7E43A42C0B3C7800484282 /* ReliaNativeAdsCollectionCell.xib */; };
+		9F87B2DA2C0D33C200242E12 /* NativeAdViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F87B2D82C0D33C200242E12 /* NativeAdViewCell.swift */; };
+		9F87B2DB2C0D33C200242E12 /* NativeAdViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F87B2D92C0D33C200242E12 /* NativeAdViewCell.xib */; };
 		9F898E3C2C0836F90059E53B /* ReliaNativeAdDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F898E3B2C0836F90059E53B /* ReliaNativeAdDataSource.swift */; };
 		9F8BE0632C06410300DCE0DD /* AdmobService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8BE0622C06410300DCE0DD /* AdmobService.swift */; };
 		9F8BE0662C06998D00DCE0DD /* Y4gAdmob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8BE0652C06998D00DCE0DD /* Y4gAdmob.swift */; };
@@ -124,6 +126,8 @@
 		9F7E43A02C0B375B00484282 /* ReliaNativeAdsTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReliaNativeAdsTableCell.xib; sourceTree = "<group>"; };
 		9F7E43A32C0B3C7800484282 /* ReliaNativeAdsCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReliaNativeAdsCollectionCell.swift; sourceTree = "<group>"; };
 		9F7E43A42C0B3C7800484282 /* ReliaNativeAdsCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReliaNativeAdsCollectionCell.xib; sourceTree = "<group>"; };
+		9F87B2D82C0D33C200242E12 /* NativeAdViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeAdViewCell.swift; sourceTree = "<group>"; };
+		9F87B2D92C0D33C200242E12 /* NativeAdViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NativeAdViewCell.xib; sourceTree = "<group>"; };
 		9F898E3B2C0836F90059E53B /* ReliaNativeAdDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReliaNativeAdDataSource.swift; sourceTree = "<group>"; };
 		9F8BE0622C06410300DCE0DD /* AdmobService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdmobService.swift; sourceTree = "<group>"; };
 		9F8BE0652C06998D00DCE0DD /* Y4gAdmob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Y4gAdmob.swift; sourceTree = "<group>"; };
@@ -461,6 +465,8 @@
 				9F7E43A42C0B3C7800484282 /* ReliaNativeAdsCollectionCell.xib */,
 				9F61A42B2C0B4B610027999C /* ReliaNativeCollectionCell.swift */,
 				9F61A4402C0B4B7D0027999C /* ReliaNativeCollectionCell.xib */,
+				9F87B2D82C0D33C200242E12 /* NativeAdViewCell.swift */,
+				9F87B2D92C0D33C200242E12 /* NativeAdViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -595,6 +601,7 @@
 				9F7E43A22C0B375B00484282 /* ReliaNativeAdsTableCell.xib in Resources */,
 				9F6392602C0853DB0034B495 /* ReliaNativeTableCell.xib in Resources */,
 				9F6EB2142BF1D7D60028828A /* Main.storyboard in Resources */,
+				9F87B2DB2C0D33C200242E12 /* NativeAdViewCell.xib in Resources */,
 				9F6EB2122BF1D7D60028828A /* Assets.xcassets in Resources */,
 				9F6EB2132BF1D7D60028828A /* LaunchScreen.storyboard in Resources */,
 				9F61A4412C0B4B7D0027999C /* ReliaNativeCollectionCell.xib in Resources */,
@@ -622,6 +629,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F87B2DA2C0D33C200242E12 /* NativeAdViewCell.swift in Sources */,
 				9FC962012BF6656800EED8AC /* InstagramShareService.swift in Sources */,
 				9F6EB2272BF200090028828A /* EShareItemScaleLevel.swift in Sources */,
 				9F6EB2152BF1D7D60028828A /* AppDelegate.swift in Sources */,

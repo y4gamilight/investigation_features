@@ -74,7 +74,7 @@ class ReliaNativeAdViewModel: NSObject{
                 var iAd = 0
                 while index < this.items.count {
                     let ad = ads[iAd]
-                    let value = ReliaNativeCellItem(title: ad.store ?? "", subTitle: ad.body ?? "", isAds: true, ads: ad)
+                    let value = ReliaNativeCellItem(title: ad.headline ?? "", subTitle: ad.body ?? "", isAds: true, ads: ad)
                     this.items.insert(value, at: index)
                     index += delta
                     iAd = iAd < ads.count - 1 ? iAd + 1 : 0
@@ -82,7 +82,7 @@ class ReliaNativeAdViewModel: NSObject{
                 index = 5
                 while index < this.items.count {
                     let ad = ads[iAd]
-                    let value = ReliaNativeCollectionItem(title: ad.store ?? "", subTitle: ad.body ?? "", isAds: true, ads: ad)
+                    let value = ReliaNativeCollectionItem(title: ad.headline ?? "", subTitle: ad.body ?? "", isAds: true, ads: ad)
                     this.collectionItems.insert(value, at: index)
                     index += delta
                     iAd = iAd < ads.count - 1 ? iAd + 1 : 0
