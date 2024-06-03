@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,6 +17,15 @@
                 <rect key="frame" x="0.0" y="0.0" width="366" height="420"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KjU-xG-SD6">
+                        <rect key="frame" x="8" y="8" width="350" height="404"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="16"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CEO-Qi-Sj1">
                         <rect key="frame" x="16" y="16" width="334" height="144"/>
                         <constraints>
@@ -40,10 +50,14 @@
                 <constraint firstItem="CEO-Qi-Sj1" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="0fo-BE-laq"/>
                 <constraint firstItem="CEO-Qi-Sj1" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="0u6-Ju-gXU"/>
                 <constraint firstItem="Tia-rG-aTo" firstAttribute="trailing" secondItem="CEO-Qi-Sj1" secondAttribute="trailing" id="1ek-b5-w10"/>
+                <constraint firstItem="KjU-xG-SD6" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" priority="500" constant="8" id="8Hb-nt-EEf"/>
+                <constraint firstAttribute="trailing" secondItem="KjU-xG-SD6" secondAttribute="trailing" priority="500" constant="8" id="8rP-fj-pUx"/>
                 <constraint firstAttribute="bottom" secondItem="aNx-yT-VCD" secondAttribute="bottom" constant="16" id="GSq-Do-w9f"/>
                 <constraint firstItem="aNx-yT-VCD" firstAttribute="leading" secondItem="Tia-rG-aTo" secondAttribute="leading" id="N6i-ck-5JL"/>
                 <constraint firstItem="Tia-rG-aTo" firstAttribute="top" secondItem="CEO-Qi-Sj1" secondAttribute="bottom" constant="8" id="Oo4-oG-RUW"/>
                 <constraint firstItem="aNx-yT-VCD" firstAttribute="trailing" secondItem="Tia-rG-aTo" secondAttribute="trailing" id="SdB-uv-QaB"/>
+                <constraint firstAttribute="bottom" secondItem="KjU-xG-SD6" secondAttribute="bottom" priority="500" constant="8" id="gqp-jq-Ndk"/>
+                <constraint firstItem="KjU-xG-SD6" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" priority="500" constant="8" id="kOX-Dz-YOD"/>
                 <constraint firstItem="Tia-rG-aTo" firstAttribute="leading" secondItem="CEO-Qi-Sj1" secondAttribute="leading" id="qP9-k6-Ngx"/>
                 <constraint firstAttribute="trailing" secondItem="CEO-Qi-Sj1" secondAttribute="trailing" constant="16" id="tnh-4X-Tit"/>
                 <constraint firstItem="aNx-yT-VCD" firstAttribute="top" secondItem="Tia-rG-aTo" secondAttribute="bottom" constant="8" id="yqH-ds-FiL"/>
@@ -57,4 +71,9 @@
             <point key="canvasLocation" x="316.03053435114504" y="130.28169014084509"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

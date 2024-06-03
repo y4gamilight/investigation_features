@@ -23,10 +23,13 @@ class ReliaNativeAdsVC: BaseViewController {
         tableView.register(nib, forCellReuseIdentifier: ReliaNativeTableCell.identifier)
         let adNib = UINib(nibName: ReliaNativeAdsTableCell.nibName, bundle: nil)
         tableView.register(adNib, forCellReuseIdentifier: ReliaNativeAdsTableCell.identifier)
+        let nativeNib = UINib(nibName: NativeAdViewCell.nibName, bundle: nil)
+        tableView.register(nativeNib, forCellReuseIdentifier: NativeAdViewCell.identifier)
         let collectionNib = UINib(nibName: ReliaNativeCollectionCell.nibName, bundle: nil)
         collectionView.register(collectionNib, forCellWithReuseIdentifier: ReliaNativeCollectionCell.identifier)
         let adCollectionNib = UINib(nibName: ReliaNativeAdsCollectionCell.nibName, bundle: nil)
         collectionView.register(adCollectionNib, forCellWithReuseIdentifier: ReliaNativeAdsCollectionCell.identifier)
+        
     }
     
     override func bindData() {
@@ -45,6 +48,7 @@ class ReliaNativeAdsVC: BaseViewController {
         tableView.delegate = dataSource
         tableView.dataSource = dataSource
         tableView.estimatedRowHeight = UITableView.automaticDimension
+        tableView.separatorStyle = .none
         collectionView.dataSource = dataSource
         collectionView.delegate = dataSource
         let layout = UICollectionViewFlowLayout()

@@ -23,42 +23,24 @@ open class Y4gAdmobNativeAd: NSObject {
     }
     
     open func loadAds(in viewController: UIViewController) {
-        adLoader = GADAdLoader(adUnitID: adUnitId, rootViewController: viewController, adTypes: [ .native ], options: [])
-        adLoader?.delegate = self
-        adLoader?.load(GADRequest())
+        loadMultiAds(in: viewController, numberAds: 1)
     }
     
     open func loadMultiAds(in viewController: UIViewController, numberAds: Int) {
         let multipleAdOptions = GADMultipleAdsAdLoaderOptions()
         multipleAdOptions.numberOfAds = numberAds;
+        let adOption = GADNativeAdViewAdOptions()
+        adOption.preferredAdChoicesPosition = .topLeftCorner
         adLoader = GADAdLoader(adUnitID: adUnitId,
                                rootViewController: viewController,
                                adTypes: [ .native ],
-                               options: [ multipleAdOptions ])
+                               options: [ multipleAdOptions, adOption])
         adLoader?.delegate = self
         adLoader?.load(GADRequest())
     }
    
 }
 
-//@property(nonatomic, readonly, copy, nullable) NSString *callToAction;
-///// Icon image.
-//@property(nonatomic, readonly, strong, nullable) GADNativeAdImage *icon;
-///// Description.
-//@property(nonatomic, readonly, copy, nullable) NSString *body;
-///// Array of GADNativeAdImage objects.
-//@property(nonatomic, readonly, strong, nullable) NSArray<GADNativeAdImage *> *images;
-///// App store rating (0 to 5).
-//@property(nonatomic, readonly, copy, nullable) NSDecimalNumber *starRating;
-///// The app store name. For example, "App Store".
-//@property(nonatomic, readonly, copy, nullable) NSString *store;
-///// String representation of the app's price.
-//@property(nonatomic, readonly, copy, nullable) NSString *price;
-///// Identifies the advertiser. For example, the advertiser’s name or visible URL.
-//@property(nonatomic, readonly, copy, nullable) NSString *advertiser;
-///// Media content. Set the associated media view's mediaContent property to this object to display
-///// this content.
-//@property(nonatomic, readonly, nonnull) GADMediaContent *mediaContent;
 extension Y4gAdmobNativeAd: GADNativeAdLoaderDelegate {
     public func adLoader(_ adLoader: GADAdLoader, didReceive nativeAd: GADNativeAd) {
         debugPrint("adLoader didReceived")

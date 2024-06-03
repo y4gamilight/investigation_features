@@ -22,7 +22,7 @@ class AdmobServiceImp: IAdmobService {
     }
     
     func loadNativeAd(in viewController: UIViewController) {
-        nativeAd.loadAds(in: viewController)
+        nativeAd.loadMultiAds(in: viewController, numberAds: 1)
     }
 
     var ads: PassthroughSubject<[GADNativeAd], Error> {
